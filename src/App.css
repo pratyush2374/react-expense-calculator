@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.expenseOuter {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 400px;
+  padding: 20px;
+}
+
+.formExpenseInput {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formExpenseInput input[type="text"],
+.formExpenseInput input[type="number"] {
+  padding: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+.formExpenseInput input[type="text"]:focus,
+.formExpenseInput input[type="number"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.formExpenseInput input[type="submit"] {
+  padding: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.formExpenseInput input[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+.addedExpenses {
+  margin-top: 20px;
+  height: auto;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+
+.individualExpense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.individualExpense:hover {
+  background: #e0f2fe;
+}
+
+.iExpenseName {
+  font-weight: bold;
+  color: #374151;
+}
+
+.iExpense {
+  color: #1f2937;
+}
+
+.edit,
+.delete {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.edit {
+  color: #4b5563;
+}
+
+.edit:hover {
+  color: #2563eb;
+}
+
+.delete {
+  color: #ef4444;
+}
+
+.delete:hover {
+  color: #dc2626;
+}
+
+.total {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.totalExpenses {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.expenses {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.empty {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ------------- */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  gap: 10px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.editForm input[type="text"],
+.editForm input[type="number"] {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #f9fafb;
+  transition: border-color 0.3s ease;
+}
+
+.editForm input[type="text"]:focus,
+.editForm input[type="number"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.editForm input[type="submit"],
+.editForm input[type="button"] {
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.editForm input[type="submit"]:hover,
+.editForm input[type="button"]:hover {
+  background: #1d4ed8;
+}
+
+.editForm input[type="button"] {
+  background: #ef4444;
+}
+
+.editForm input[type="button"]:hover {
+  background: #dc2626;
+}
+
+.save:disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border: 1px solid #d1d5db;
+  opacity: 0.6;
+}
+
+.save:disabled:hover {
+  background-color: #d1d5db;
+  color: #9ca3af;
+}
